@@ -25,9 +25,9 @@ Appointmentroutes.post('/', async (request,response) => {
     }
 })
 
-Appointmentroutes.get('/' , (request, response) => {
-    const AppointmentRepository = getCustomRepository(AppointmentRepositorie)
-    const appointment = AppointmentRepository.find()
+Appointmentroutes.get('/' , async (request, response) => {
+    const AppointmentRepository =  getCustomRepository(AppointmentRepositorie)
+    const appointment = await AppointmentRepository.find()
 
     return response.json(appointment)
 })

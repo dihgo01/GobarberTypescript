@@ -2,21 +2,26 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 
 
 @Entity('appointments')
-class Appointment {
+class User {
     @PrimaryGeneratedColumn('uuid')
     id : String;
 
     @Column()
-    provider: String;
+    name: String;
 
-    @Column('timestamp')
-    date: Date;
+    @Column()
+    email: String;
+
+
+    @Column()
+    password: String;
 
     @CreateDateColumn()
     created_at : Date;
 
     @UpdateDateColumn()
     updated_at : Date;
+
 }
 
-export default Appointment
+export default User
