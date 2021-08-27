@@ -8,12 +8,13 @@ export class CreateUser1629629756134 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
+                        type: "varchar",
+                        isPrimary: true,
                         generationStrategy: 'uuid'
                     },
                     {
                         name: 'name',
-                        type: "uuid",
+                        type: "varchar",
                         isNullable: false,
                     },
                     {
@@ -30,12 +31,12 @@ export class CreateUser1629629756134 implements MigrationInterface {
                     {
                         name: 'created_at',
                         type: 'timestamp',
-                        default: 'now()'
+                        default : 'now()'
                     },
                     {
                         name: 'updated_at',
                         type: 'timestamp',
-                        default: 'now()'
+                        default : 'now()'
                     },
 
 

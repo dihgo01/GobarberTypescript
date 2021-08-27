@@ -1,5 +1,5 @@
 
-import {MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
+import {MigrationInterface, QueryRunner, Table } from "typeorm";
 
 
 export class createAppointment1629381350424 implements MigrationInterface {
@@ -11,13 +11,13 @@ export class createAppointment1629381350424 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
+                        type: "varchar",
                         generationStrategy: 'uuid'
                     },
                     {
                         name: 'provider_id',
-                        type: "uuid",
-                        isNullable: true,
+                        type: "varchar",
+                        isNullable: false,
                     },
                     {
                         name: 'date',
@@ -32,19 +32,22 @@ export class createAppointment1629381350424 implements MigrationInterface {
                     {
                         name: 'updated_at',
                         type: 'timestamp',
-
+                        default: 'now()'
                     },
-                ]
+                ],
+                foreignKeys: [
+                    {
+                      name: "providerUser",
+                      referencedTableName: "users",
+                      referencedColumnNames: ["id"],
+                      columnNames: ["provider_id"],
+                      onDelete: "CASCADE",
+                      onUpdate: "CASCADE"
+                    }
+                  ]
             })
         )
 
-        await queryRunner.createForeignKey('appointments', new TableForeignKey({
-         columnNames: ["provider_id"],
-         referencedColumnNames: ["id"],
-         referencedTableName: "users",
-         onDelete : 'SET NULL',
-         onUpdate: 'CASCADE',
-        }))
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

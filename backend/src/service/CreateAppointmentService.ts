@@ -4,12 +4,12 @@ import { getCustomRepository } from 'typeorm'
 import { startOfHour } from 'date-fns'
 
 interface RequestDTO {
-    provider: String;
+    provider_id: String;
     date: Date;
 }
 class CreateAppointmentService {
 
-    public async execute({provider , date }: RequestDTO ): Promise< Appointment >{
+    public async execute({provider_id , date }: RequestDTO ): Promise< Appointment >{
         const appointmentRepository = getCustomRepository(AppointmentRepositorie)
 
         const startHour = startOfHour(date)
@@ -19,7 +19,7 @@ class CreateAppointmentService {
             throw Error ('This appointment is already booked')
         }
 
-        const appointment = appointmentRepository.create({ provider, date: startHour })
+        const appointment = appointmentRepository.create({ provider_id, date: startHour })
 
         await appointmentRepository.save( appointment);
 
