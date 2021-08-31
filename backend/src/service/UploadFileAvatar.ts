@@ -3,6 +3,7 @@ import { getRepository } from 'typeorm'
 import path from 'path'
 import UploadConfig from '../config/multer'
 import fs from 'fs'
+import AppError from '../error/AppError'
 
 interface Request {
     user_id: string,
@@ -16,7 +17,7 @@ class UploadAvatar {
         const user = await usersRepository.findOne( user_id)
 
         if(!user) {
-            throw new Error('Only authenticated users can change avatar')
+            throw new AppError('Only authenticated users can change avatar')
         }
         if(user.avatar) {
             const uploadAvatarFile = path.join( UploadConfig.directory, user.avatar)

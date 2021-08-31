@@ -5,7 +5,7 @@ import AuthService from "../service/AuthSessionService";
 const Sessionroutes = Router()
 
 Sessionroutes.post('/', async (request,response) => {
-    try {
+
         const { email, password} = request.body
 
         const AuthenticateUser = new AuthService ()
@@ -17,10 +17,7 @@ Sessionroutes.post('/', async (request,response) => {
 
 
         return response.json({ user, token })
-    }
-    catch (err) {
-        return response.status(400).json( {error : err.message})
-    }
+
 })
 
 

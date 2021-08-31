@@ -11,7 +11,7 @@ const Appointmentroutes = Router()
 
 
 Appointmentroutes.post('/', async (request,response) => {
-    try {
+
 
         const { provider_id, date} = request.body
 
@@ -19,10 +19,7 @@ Appointmentroutes.post('/', async (request,response) => {
     const createAppointment = new CreateAppointmentService()
     const appointment = await createAppointment.execute({provider_id , date:parseDate})
     return response.json({appointment})
-    }
-    catch (err) {
-        return response.status(400).json( {error : err.message})
-    }
+
 })
 
 Appointmentroutes.get('/' , async (request, response) => {
