@@ -4,102 +4,80 @@
 
 <div align="center" style="margin: 20px;">
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/gobarber/LICENSE.md)
-![GitHub last commit](https://img.shields.io/github/last-commit/jvictorfarias/gobarber?color=green&style=flat-square)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/jvictorfarias/GoBarber_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jvictorfarias/GoBarber&amp;utm_campaign=Badge_Grade)
-![GitHub top language](https://img.shields.io/github/languages/top/jvictorfarias/gobarber?style=flat-square)
-
-
 <p align="center" >
-  <a href="#fire-prévia-da-aplicação"> :fire: Prévia da Aplicação</a> |
-  <a href="#rocket-tecnologias-usadas"> :rocket: Tecnologias Usadas</a> |
-  <a href="#hammer-deploy-da-aplicação"> :hammer: Deploy da Aplicação</a> |
-  <a href="#thinking-como-contribuir?"> :thinking: Como Contribuir?</a> |
-  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> 
+  <a href="#star-introduction"> :star: Introduction</a> |
+  <a href="#rocket-technologies"> :rocket: Technologies</a> |
+  <a href="#hammer-application-deploy"> :hammer: Application Deploy</a> |
+  <a href="#computer-how-to-use"> :computer: How To Use </a> |
 </p>
 
 </div>
 
-## :barber: O projeto
+## :star: Introduction
 
-Aplicação para agendar e gerenciar serviços de beleza, onde prestadores de serviços podem se cadastrar,
-e usuários poderão marcar agendamentos com estes provedores.
-
-## :fire: Prévia da Aplicação
+Application to schedule and manage beauty services, where service providers can register, and users can make appointments with these providers.
 
 <div align="center"> 
 <img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
 </div>
 
-### :rocket: Tecnologias Usadas
+## :rocket: Technologies
 
-O projeto foi feito com as seguintes tecnologias:
+This project was developed at the [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp) with the following technologies:
 
 - [NodeJS](https://nodejs.org/en/)
 - [ReactJS](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
 - [ExpressJS](https://expressjs.com/pt-br/)
 - [JWT](https://jwt.io/)
 - [Yup](https://github.com/jquense/yup)
 - [Styled-Components](https://styled-components.com/)
+- [date-fns](https://date-fns.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Postgres](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
 {...}
 
-## :hammer: Deploy da Aplicação
+## :hammer: Application Deploy
 {...}
 
+## :computer: How To Use
 
-## :thinking: Como Contribuir?
-**Faça um fork deste repositório**
-
-```bash
-# Clone o seu fork
-$ git clone url-do-seu-fork && cd gobarber
-
-# Crie uma branch com sua feature ou correção de bugs
-$ git checkout -b minha-branch
-
-# Faça o commit das suas alterações
-$ git commit -m 'feature/bugfix: minhas alterações'
-
-# Faça o push para a sua branch
-$ git push origin minha-branch
-```
-
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-## :zap: Executando o Projeto
-#### Clonando o projeto
+#### Cloning the project
 ```sh
-$ git clone https://github.com/jvictorfarias/gobarber.git
-$ cd gobarber
+$ git clone https://github.com/dihgo01/GobarberTypescript.git
+$ cd GoBarberTypescript
 ```
-#### Iniciando a API
+#### Starting the API
 ```sh
 $ cd api
 
-# Criando a imagem Docker do banco de dados:
-# Dentro do projeto, já existe uma arquivo docker-compose.yml que possui o
-# PostgreSQL como banco de dados, basta ter o Docker instalado em sua máquina.
-$ docker-compose up -d # Iniciará em background e não irá bloquear o shell
+# Creating the Database Docker Image:
+# Inside the project, there is already a docker-compose.yml file that has the
+# PostgreSQL as a database, just have Docker installed on your machine.
+$ docker-compose up -d # It will start in the background and will not lock the shell
 
-# Rodando as migrations para o banco de dados e iniciando o projeto
+# Running migrations to the database and starting the project
 $ yarn && yarn typeorm migration:run && yarn dev:server
 ```
 
 <a href="https://insomnia.rest/run/?label=gobarber-jvictorfarias&uri=https%3A%2F%2Fgithub.com%2Fjvictorfarias%2FGoBarber%2Fblob%2Fmaster%2Fapi%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
-#### Iniciando o Frontend
+#### Starting Frontend
 ```sh
-$ cd web
+$ cd frontend
 $ yarn && yarn start
 ```
-#### Iniciando o Mobile(Android)
+#### Starting Mobile
 ```sh
 $ cd mobile
 $ yarn && yarn android && yarn start
 ```
 
-### :memo: Licença
+Made with ♥ by Diego Candido :wave: [Get in touch!](https://www.linkedin.com/in/diego-c-c-s/)
 
-Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
-
-<p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com :purple_heart: by <strong> Joao Victor Farias</strong> </p>
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
