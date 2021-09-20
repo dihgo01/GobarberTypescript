@@ -12,7 +12,7 @@ interface IStorageConfig {
   };
 }
 
-const tmpFolder = path.resolve(__dirname, '..', '..', 'tmp');
+const tmpFolder = path.resolve(__dirname, '..', '..', 'temp');
 
 export default {
   driver: STORAGE_DRIVER,
