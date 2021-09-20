@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 20px;">
-<img alt="gobarber" src="./img/logo.png" width="auto" heigth="auto"/>
+<img alt="gobarber" src="https://github.com/dihgo01/GobarberTypescript/blob/main/resource/logo.png" width="auto" heigth="auto"/>
 </div>
 
 <div align="center" style="margin: 20px;">
